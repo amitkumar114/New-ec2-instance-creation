@@ -9,7 +9,7 @@ resource "aws_instance" "web" {
   vpc_security_group_ids=[aws_security_group.allow_ssh.id]
 
 # key name
-key_name = var.key_name
+#key_name = var.key_name
 
   tags = {
     Name = "Ec2-with-VPC"
