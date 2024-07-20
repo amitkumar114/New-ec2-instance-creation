@@ -183,24 +183,6 @@ resource "aws_lambda_alias" "example" {
   function_version = aws_lambda_function.example.version
 }
 
-resource "aws_db_instance" "default" {
-  allocated_storage    = 20
-  storage_type         = "gp2"
-  engine               = "mysql"
-  engine_version       = "8.0"
-  instance_class       = "db.t3.micro"
-  db_name              = "mydb"
-  username             = "admin"
-  password             = "mypassword"
-  parameter_group_name = "default.mysql8.0"
-  skip_final_snapshot  = true
-
-  vpc_security_group_ids = [aws_security_group.example]
-
-  tags = {
-    Name = "My RDS instance"
-  }
-}
 
 
 
