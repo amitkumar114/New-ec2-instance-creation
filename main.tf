@@ -55,7 +55,6 @@ resource "aws_instance" "example"{
   ami = "ami-0c55b159cbfafe1f0"
   instance_type = var.ec2type[count.index]
   tags = local.common_tags
-  key_name = aws_key_pair.aws_key.key_name
   count = 5
 }
   
